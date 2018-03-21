@@ -1,4 +1,4 @@
-var Promise = require('es6-promise.min')
+var Promise = require('es6-promise.min').Promise
 var md5 = require('md5.min')
 var config = require('../config.js')
 var HOST = 'https://api.octinn.com/'
