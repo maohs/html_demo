@@ -1,0 +1,26 @@
+<!-- 动态Prop -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue18</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="parentMsg">
+        <child v-bind:message='parentMsg'></child>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        Vue.component('child',{
+            props:['message'],
+            template:'<h1>{{message}}</h1>'
+        })
+        new Vue({
+            el:'#app',
+            data:{
+                parentMsg:'父组件内容'
+            }
+        })
+    </script>
+</body>
+</html>

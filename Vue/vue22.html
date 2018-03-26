@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue22</title>
+</head>
+<body>
+    <div id="app">
+        <p>页面载入时，input元素自动获取焦点：</p>
+        <input v-focus>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+
+        new Vue({
+            el:'#app',
+            directives: {
+                focus: {
+                    inserted:function(el) {
+                        el.focus();
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

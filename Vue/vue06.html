@@ -1,0 +1,28 @@
+<!-- 计算属性关键词：computed -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue06</title>
+</head>
+<body>
+    <div id="app">
+        <p>原始字符串：{{message}}</p>
+        <p>计算后反转字符串：{{reversedMessage}}</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue ({
+            el:'#app',
+            data:{message:'Runoob!'},
+            computed:{
+                //计算属性的 getter
+                reversedMessage:function() {
+                    // 'this'指向 vm 实例
+                    return this.message.split('').reverse().join('');
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- prop是父组件用来传递数据的一个自定义属性
+父组件的数据需要通过props把数据传给子组件，子组件需要显式的用props选项声明'prop' -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue17</title>
+</head>
+<body>
+    <div id="app">
+        <child message="hello"></child>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        Vue.component('child',{
+            props:['message'],
+            template:'<h1>{{message}}</h1>'
+        })
+        new Vue({
+            el:'#app'
+        })
+    </script>
+</body>
+</html>

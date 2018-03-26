@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue19</title>
+</head>
+<body>
+    <div id="app">
+        <template v-for="site in sites">
+            <todo-item v-bind:todo="site"></todo-item>
+        </template>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        Vue.component('todo-item',{
+            props:['todo'],
+            template:'<h1>{{todo.text}}</h1>'
+        })
+        new Vue({
+            el:'#app',
+            data:{
+                sites:[
+                {text:'Runoob'},
+                {text:'Google'},
+                {text:'Taobao'}]
+            }
+        })
+    </script>
+</body>
+</html>

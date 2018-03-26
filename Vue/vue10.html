@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue10</title>
+</head>
+<body>
+    <div id="app">
+        <div v-bind:style="styleObject">菜鸟教程</div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data:{
+                styleObject: {
+                    color:'green',
+                    'font-size':'30px'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

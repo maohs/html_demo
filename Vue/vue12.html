@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue12</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .test {
+            width: 200px;
+            height: 200px;
+            background: #b42a2a;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click.once="greet">Greet
+        </button>
+        <div class="test" v-on:click='test'></div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data: {
+                name:'Vue.js'
+            },
+            methods: {
+                greet:function(event) {
+                    console.log('哈哈哈哈0');
+                    // alert('Hello' + this.name + '!');
+                    if (event) {
+                        // alert(event.target.tagName);
+                    }
+                }
+            },
+            computed: {
+                test:function() {
+                    console.log('哈哈哈哈1');
+                }
+            }
+        })
+    </script>
+</body>
+</html>

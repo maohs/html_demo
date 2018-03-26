@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue03</title>
+    <style type="text/css">
+        .class1 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <!-- 可以使用v-model指令在表单<input>及<textarea>元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素 -->
+    <!-- v-model会忽略所有表单元素的value、checked、selected特性的初始值而总是将Vue实例的数据作为数据来源。你应该通过JavaScript在组件的data选项中声明初始值 -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <div id="app">
+        <label for="r1">修改颜色</label>
+        <input type="checkbox" v-model="class1" id="r1">
+        <br>
+        <br>
+        <div v-bind:class="{'class1':class1}">directiva v-bind:class</div>
+    </div>
+    <script type="text/javascript">
+        new Vue ({
+            el:"#app",
+            data:{
+                class1:false
+            }
+        })
+    </script>
+</body>
+</html>

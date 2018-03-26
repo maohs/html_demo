@@ -1,0 +1,21 @@
+<!-- 全局组件 -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue15</title>
+</head>
+<body>
+    <div id="app">
+        <runoob></runoob>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        Vue.component('runoob', {
+            template:'<h1>自定义组件!</h1>'
+        })
+        new Vue ({
+            el:'#app'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- 过滤器 -->
+<!-- 过滤器函数接受表达式的值作为第一个参数。
+过滤器可以串联{{message|filterA|filterB}}
+过滤器是JavaScript函数，因此可以接受参数{{message|filterA('arg1',arg2)}}
+这里，message是第一个参数，字符串'arg1'将传给过滤器作为第二个参数，arg2表达式的值将被求值然后传给过滤器作为第三个参数 -->
+<!-- 完整语法 -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue04</title>
+</head>
+<body>
+    <div id="app">
+        {{message|capitalize}}
+        <a v-bind:href ='url' ></a>
+        <!-- 缩写 -->
+        <a :href='url'></a>
+        <!-- 完整语法 -->
+        <a v-on:click="doSomething"></a>
+        <!-- 缩写 -->
+        <a @click="doSomething"></a>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data:{
+                message:'runoob'
+            },
+            filters: {
+                capitalize:function(value) {
+                    if (!value) {
+                        return ''
+                    }
+                    value = value.toString();
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

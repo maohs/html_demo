@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue11</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="counter +=1">增加1</button>
+        <p>这个按钮被点击了{{counter}}次。</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data:{
+                counter:0
+            }
+        })
+    </script>
+</body>
+</html>

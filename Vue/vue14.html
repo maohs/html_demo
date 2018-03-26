@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue14</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model.lazy="message">
+        <p>{{message}}</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data:{
+                message:'Runoob!'
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue16</title>
+</head>
+<body>
+    <div id="app">
+        <runoob></runoob>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript">
+        var Child = {
+            template:'<h1>自定义组件</h1>'
+        }
+        new Vue({
+            el:'#app',
+            components: {
+                'runoob':{template:'<h1>自定义组件</h1>'}
+            }
+        })
+    </script>
+</body>
+</html>

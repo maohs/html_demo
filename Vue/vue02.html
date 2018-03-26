@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue02</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="vue_det">
+        <h1>site: {{site}}</h1>
+        <h1>url:{{url}}</h1>
+        <h1>Alexa:{{alexa}}</h1>
+    </div>
+    <script type="text/javascript">
+        var data = {site:'菜鸟教程',url:'www.runoob.com',alexa:10000}
+        var vm = new Vue({
+            el: '#vue_det',
+            data:data
+        })
+        //它们引用相同的对象
+        document.write(vm.a === data.a);
+        document.write('<br>');
+        vm.site = 'Runoob';
+        document.write(data.site + '<br>')
+
+        data.alexa = 1234;
+        document.write(data.alexa);
+    </script>
+</body>
+</html>
